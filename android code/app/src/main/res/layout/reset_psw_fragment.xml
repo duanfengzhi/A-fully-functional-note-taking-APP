@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".ui.resetpsw.ResetPswFragment">
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" tools:ignore="UselessParent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp" android:id="@+id/newpsw" android:textSize="24sp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="25dp"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="25dp"
+                    android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintHorizontal_bias="0.0" android:background="@drawable/password"
+                    app:layout_constraintDimensionRatio="w,1:1"/>
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/new_psw_edt" android:layout_weight="1"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toTopOf="@+id/newpsw" app:layout_constraintStart_toEndOf="@+id/newpsw"
+                    android:layout_marginStart="8dp" android:layout_marginLeft="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/newpsw" android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+                    app:layout_constraintHorizontal_bias="0.0" tools:ignore="Autofill,LabelFor" android:hint="请输入新密码"/>
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp" android:id="@+id/newpsw2" android:layout_weight="1"
+                    android:textSize="24sp"
+                    app:layout_constraintTop_toBottomOf="@+id/newpsw" android:layout_marginStart="25dp"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="25dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintVertical_bias="0.0" android:layout_marginTop="16dp"
+                    android:background="@drawable/password" app:layout_constraintDimensionRatio="w,1:1"/>
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/new_psw_edt2" android:layout_weight="1"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/newpsw" app:layout_constraintStart_toEndOf="@+id/newpsw2"
+                    android:layout_marginStart="8dp" android:layout_marginLeft="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/newpsw2" android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+                    app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"
+                    tools:ignore="Autofill,LabelFor" android:hint="请再次输入新密码"/>
+            <Button
+                    android:text="@string/resetPsw_ensurePsw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:id="@+id/resetpswBtn" android:textSize="24sp"
+                    android:layout_gravity="center_horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/new_psw_edt2" android:layout_marginStart="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="@drawable/bg_btn_white"
+                    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"
+                    android:layout_marginTop="70dp" app:layout_constraintWidth_max="200dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>

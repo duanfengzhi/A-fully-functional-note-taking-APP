@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.code.GetCodeFragment">
+
+    <LinearLayout android:orientation="vertical"
+                  android:layout_height="match_parent"
+                  android:layout_marginTop="150dp"
+                  android:layout_width="match_parent"
+                  tools:ignore="UselessParent">
+
+        <EditText android:layout_width="300dp"
+                  android:id="@+id/input_userId"
+                  android:layout_marginTop="30dp"
+                  android:hint="@string/getCode_userId"
+                  android:layout_gravity="center_horizontal"
+                  android:layout_height="wrap_content"
+                  tools:ignore="Autofill,TextFields"/>
+
+        <EditText android:layout_width="300dp"
+                  android:id="@+id/input_telephone"
+                  android:layout_marginTop="20dp"
+                  android:hint="@string/getCode_telephone"
+                  android:layout_gravity="center_horizontal"
+                  android:layout_height="wrap_content"
+                  tools:ignore="Autofill,TextFields"/>
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_marginTop="10dp"
+                      android:layout_gravity="center_horizontal"
+                      android:layout_height="wrap_content">
+
+            <EditText android:layout_width="150dp"
+                      android:id="@+id/input_code"
+                      android:layout_marginTop="80dp"
+                      android:hint="@string/getCode_code"
+                      android:layout_gravity="center_horizontal"
+                      android:layout_height="wrap_content"
+                      tools:ignore="Autofill,TextFields"/>
+
+            <Button android:layout_width="100dp"
+                    android:id="@+id/getCode"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/getCode_code_bnt"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_height="50dp" android:background="@drawable/hengxian"
+                    android:gravity="center_horizontal" android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <Button android:layout_width="100dp"
+                android:id="@+id/btn_next"
+                android:text="@string/getCode_nextbnt"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:layout_height="wrap_content" android:background="@drawable/bg_btn_white"/>
+
+    </LinearLayout>
+    <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp" android:id="@+id/btn_return"
+            android:background="@drawable/btn_return"/>
+</FrameLayout>

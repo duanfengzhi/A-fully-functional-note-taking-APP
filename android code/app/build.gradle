@@ -1,0 +1,87 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.0"
+    defaultConfig {
+        applicationId "com.hfut.cqyzs.memorandum"
+        minSdkVersion 15
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        packagingOptions {
+            exclude 'META-INF/rxjava.properties'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+// 添加插件
+apply plugin: 'com.mob.sdk'
+
+// 在MobSDK的扩展中注册SMSSDK的相关信息
+MobSDK {
+    appKey "d580ad56b4b5"
+    appSecret "7fcae59a62342e7e2759e9e397c82bdd"
+
+    SMSSDK {
+
+    }
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.core:core-ktx:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    //使用navigation导航的相关依赖
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.1.0-alpha05'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.1.0-alpha05'
+    //使用retrofit进行网络访问的相关依赖
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'io.reactivex:rxjava:1.3.0'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    //使用room数据库的相关依赖
+    implementation 'androidx.room:room-runtime:2.1.0'
+    kapt "androidx.room:room-compiler:2.1.0"
+    implementation 'androidx.room:room-ktx:2.1.0'
+    implementation 'androidx.room:room-rxjava2:2.1.0'
+    implementation 'androidx.room:room-guava:2.1.0'
+    testImplementation 'androidx.room:room-testing:2.1.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    //使用liveData的相关依赖
+    implementation 'android.arch.lifecycle:extensions:1.1.0'
+    //使用可视化room数据库工具的相关依赖
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.4'
+    //okhttpUtils
+    implementation 'com.zhy:okhttputils:2.6.2'
+    //Okgo依赖
+    implementation 'com.lzy.net:okgo:3.0.4'
+    implementation files('libs/Msc.jar')
+    implementation files('libs/Sunflower.jar')
+}

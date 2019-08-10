@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/navigation_memo" app:startDestination="@id/LoginFragment">
+
+    <fragment android:id="@+id/GetCodeFragment"
+              android:label="@string/memo_GetCodeFragmentTitle"
+              android:name="com.hfut.cqyzs.memorandum.ui.code.GetCodeFragment"
+              tools:layout="@layout/get_code_fragment">
+
+        <action android:id="@+id/action_GetCodeFragment_to_ResetPswFragment" app:destination="@id/ResetPswFragment"/>
+        <action android:id="@+id/action_GetCodeFragment_to_LoginFragment" app:destination="@id/LoginFragment"
+                app:popUpTo="@+id/GetCodeFragment" app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment android:id="@+id/LoginFragment"
+              android:label="@string/memo_LoginFragmentTitle"
+              android:name="com.hfut.cqyzs.memorandum.ui.login.LoginFragment"
+              tools:layout="@layout/login_fragment">
+        <action android:id="@+id/action_LoginFragment_to_HomeFragment" app:destination="@id/HomeFragment"
+                app:popUpTo="@+id/LoginFragment" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_LoginFragment_to_RegisterFragment" app:destination="@id/RegisterFragment"
+                app:popUpTo="@+id/LoginFragment" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_LoginFragment_to_GetCodeFragment" app:destination="@id/GetCodeFragment"
+                app:popUpTo="@+id/LoginFragment" app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment android:id="@+id/AccountFragment"
+              android:label="@string/memo_AccountFragmentTitle"
+              android:name="com.hfut.cqyzs.memorandum.ui.account.AccountFragment"
+              tools:layout="@layout/account_fragment">
+        <action android:id="@+id/action_AccountFragment_to_HomeFragment" app:destination="@id/HomeFragment"/>
+        <action android:id="@+id/action_AccountFragment_to_LoginFragment" app:destination="@id/LoginFragment"
+                app:popUpTo="@+id/AccountFragment" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_AccountFragment_to_SetEmailFragment" app:destination="@id/SetEmailFragment"
+                app:popUpTo="@+id/AccountFragment" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_AccountFragment_to_SetTelFragment" app:destination="@id/SetTelFragment"
+                app:popUpTo="@+id/AccountFragment" app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment android:id="@+id/TaskModifyFragment"
+              android:name="com.hfut.cqyzs.memorandum.ui.task.TaskModifyFragment"
+              tools:layout="@layout/task_modify_fragment">
+        <action android:id="@+id/action_TaskModifyFragment_to_HomeFragment" app:destination="@id/HomeFragment"
+                app:popUpTo="@+id/TaskModifyFragment" app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment android:id="@+id/SetEmailFragment"
+              android:label="@string/memo_SetEmailFragmentTitle"
+              android:name="com.hfut.cqyzs.memorandum.ui.account.SetEmailFragment"
+              tools:layout="@layout/set_email_fragment">
+        <action android:id="@+id/action_SetEmailFragment_to_AccountFragment" app:destination="@id/AccountFragment"
+                app:popUpTo="@+id/SetEmailFragment" app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment android:id="@+id/SetTelFragment"
+              android:label="@string/memo_SetTelFragmentTitle"
+              android:name="com.hfut.cqyzs.memorandum.ui.account.SetTelFragment"
+              tools:layout="@layout/set_tel_fragment">
+        <action android:id="@+id/action_SetTelFragment_to_AccountFragment" app:destination="@id/AccountFragment"
+                app:popUpTo="@+id/SetTelFragment" app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment android:id="@+id/HomeFragment"
+              android:label="@string/memo_HomeFragmentTitle"
+              android:name="com.hfut.cqyzs.memorandum.ui.home.HomeFragment"
+              tools:layout="@layout/home_fragment">
+        <action android:id="@+id/action_HomeFragment_to_TaskEditFragment" app:destination="@id/TaskEditFragment"
+                app:popUpTo="@+id/HomeFragment" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_HomeFragment_to_RecordEditFragment" app:destination="@id/RecordEditFragment"
+                app:popUpTo="@+id/HomeFragment" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_HomeFragment_to_SettingFragment" app:destination="@id/SettingFragment"
+                app:popUpTo="@+id/HomeFragment" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_HomeFragment_to_RecycleFragment" app:destination="@id/RecycleFragment"
+                app:popUpTo="@+id/HomeFragment" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_HomeFragment_to_ReviewFragment" app:destination="@id/ReviewFragment"/>
+        <action android:id="@+id/action_HomeFragment_to_AccountFragment" app:destination="@id/AccountFragment"
+                app:popUpTo="@+id/HomeFragment" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_HomeFragment_to_TaskModifyFragment" app:destination="@id/TaskModifyFragment"
+                app:popUpTo="@+id/HomeFragment" app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment android:id="@+id/RecordEditFragment"
+              android:label="@string/memo_RecordEditFragmentTitle"
+              android:name="com.hfut.cqyzs.memorandum.ui.record.RecordEditFragment"
+              tools:layout="@layout/record_edit_fragment">
+        <action android:id="@+id/action_RecordEditFragment_to_HomeFragment" app:destination="@id/HomeFragment"
+                app:popUpTo="@+id/RecordEditFragment" app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment android:id="@+id/RecycleFragment"
+              android:label="@string/memo_RecycleFragmentTitle"
+              android:name="com.hfut.cqyzs.memorandum.ui.recycle.RecycleFragment"
+              tools:layout="@layout/recycle_fragment">
+        <action android:id="@+id/action_RecycleFragment_to_HomeFragment" app:destination="@id/HomeFragment"
+                app:popUpTo="@+id/RecycleFragment" app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment android:id="@+id/RegisterFragment"
+              android:label="@string/memo_RegisterFragmentTitle"
+              android:name="com.hfut.cqyzs.memorandum.ui.register.RegisterFragment"
+              tools:layout="@layout/register_fragment">
+        <action android:id="@+id/action_RegisterFragment_to_LoginFragment" app:destination="@id/LoginFragment"
+                app:popUpTo="@+id/RegisterFragment" app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment android:id="@+id/TaskEditFragment"
+              android:label="@string/memo_TaskEditFragmentTitle"
+              android:name="com.hfut.cqyzs.memorandum.ui.task.TaskEditFragment"
+              tools:layout="@layout/task_edit_fragment">
+        <action android:id="@+id/action_TaskEditFragment_to_HomeFragment" app:destination="@id/HomeFragment"
+                app:popUpTo="@+id/TaskEditFragment" app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment android:id="@+id/ResetPswFragment"
+              android:label="@string/memo_ResetPswFragmentTitle"
+              android:name="com.hfut.cqyzs.memorandum.ui.resetpsw.ResetPswFragment"
+              tools:layout="@layout/reset_psw_fragment">
+        <action android:id="@+id/action_ResetPswFragment_to_LoginFragment" app:destination="@id/LoginFragment"
+                app:popUpTo="@+id/ResetPswFragment" app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment android:id="@+id/ReviewFragment"
+              android:label="@string/memo_ReviewFragmentTitle"
+              android:name="com.hfut.cqyzs.memorandum.ui.review.ReviewFragment"
+              tools:layout="@layout/review_fragment"/>
+
+    <fragment android:id="@+id/SettingFragment"
+              android:label="@string/memo_SettingFragmentTitle"
+              android:name="com.hfut.cqyzs.memorandum.ui.setting.SettingFragment"
+              tools:layout="@layout/setting_fragment">
+        <action android:id="@+id/action_SettingFragment_to_HomeFragment" app:destination="@id/HomeFragment"/>
+    </fragment>
+
+</navigation>

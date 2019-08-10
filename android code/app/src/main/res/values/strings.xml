@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">山人自有妙记</string>
+
+    <string name="memo_LoginFragmentTitle">登录界面</string>
+    <string name="memo_GetCodeFragmentTitle">获取验证码界面</string>
+    <string name="memo_HomeFragmentTitle">主页界面</string>
+    <string name="memo_AccountFragmentTitle">用户信息界面</string>
+    <string name="memo_SetEmailFragmentTitle">修改邮箱界面</string>
+    <string name="memo_SetTelFragmentTitle">修改手机号界面</string>
+    <string name="memo_RecordEditFragmentTitle">记录编辑界面</string>
+    <string name="memo_RecycleFragmentTitle">回收站界面</string>
+    <string name="memo_RegisterFragmentTitle">注册界面</string>
+    <string name="memo_TaskEditFragmentTitle">提醒编辑界面</string>
+    <string name="memo_ResetPswFragmentTitle">重设密码界面</string>
+    <string name="memo_ReviewFragmentTitle">历史回顾界面</string>
+    <string name="memo_SettingFragmentTitle">设置界面</string>
+
+    <string name="login_Username">用户名:</string>
+    <string name="login_Password">密&#160;&#160;&#160;&#160;码:</string>
+    <string name="login_InputUsername">请输入用户名</string>
+    <string name="login_InputPassword">请输入密码</string>
+    <string name="login_BtnLogin">登录</string>
+    <string name="login_BtnRegister">注册</string>
+    <string name="login_BtnForgetPassword">忘记密码</string>
+
+    <string name="resetPsw_firPsw">新的密码：</string>
+    <string name="resetPsw_secPsw">确认密码：</string>
+    <string name="resetPsw_ensurePsw">确认修改</string>
+
+    <string name="register_username">用&#160;&#160;户&#160;&#160;名:</string>
+    <string name="register_title">注&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;册</string>
+    <string name="register_varatar">头像选择:</string>
+    <string name="register_email">邮&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;箱:</string>
+    <string name="register_password">密&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;码:</string>
+    <string name="register_ensure_psw">确认密码:</string>
+    <string name="register_phone">手&#160;&#160;机&#160;&#160;号:</string>
+    <string name="register_identity">获取验证码</string>
+    <string name="register_register">注册</string>
+    <string name="register_return">返回</string>
+    <string name="register_hint_username">请输入用户名</string>
+    <string name="register_hint_email">请输入邮箱</string>
+    <string name="register_hint_psw">请输入密码</string>
+    <string name="register_hint_ensure_psw">请再次输入密码</string>
+    <string name="register_hint_phone">请输入手机号</string>
+    <string name="register_hint_identify">请输入验证码</string>
+
+    <string name="account_title">个人信息</string>
+    <string name="account_username">用户名：</string>
+    <string name="account_telephone">手机号：</string>
+    <string name="account_email">邮箱：</string>
+    <string name="account_edit">编辑</string>
+    <string name="account_logout">注销账号</string>
+
+    <string name="cancel">取消</string>
+    <string name="title">请选择时间</string>
+    <string name="confirm">确定</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="hour">时</string>
+    <string name="minute">分</string>
+    <string name="select_date">选择日期</string>
+    <string name="deadline">截止日期</string>
+    <string name="select_time">选择时间</string>
+    <string name="clock_time">提醒时间</string>
+
+    <string name="setEmail_newEmail">新的邮箱：</string>
+    <string name="setEmail_ensureEmail">确认修改</string>
+
+    <string name="setTel_newTel">新的手机号：</string>
+    <string name="setTel_ensureTel">确认修改</string>
+    <string name="getCode_telephone">请输入您的手机号</string>
+    <string name="getCode_userId">请输入您的用户名</string>
+    <string name="getCode_code">验证码</string>
+    <string name="getCode_code_bnt">获取验证码</string>
+    <string name="getCode_nextbnt">下一步</string>
+    <string name="slide_name">用户名</string>
+    <string name="slide_setting">设置</string>
+    <string name="slide_cloud">云同步</string>
+    <string name="slide_newFolder">新建清单</string>
+    <string name="add_item_hint">请输入将要新建的清单名</string>
+
+    <string name="recycle_title">回收站</string>
+    <string name="recycle_list">只显示清单</string>
+    <string name="recycle_home_task">只显示任务</string>
+    <string name="recycle_home_record">只显示记录</string>
+    <string name="recycle_home_all">显示全部</string>
+    <string name="recycle_home_all_item">显示当前清单全部内容</string>
+
+</resources>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".ui.home.HomeFragment">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/drawer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            tools:openDrawer="start">
+
+        <include layout="@layout/layout_home_content"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_gravity="start"
+                      android:orientation="vertical"
+                      android:background="#FFFAF0"
+        >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+            >
+                <ImageView
+                        android:src="@drawable/denglong"
+                        android:layout_width="99dp"
+                        android:layout_height="106dp" android:id="@+id/imageView"
+                        app:layout_constraintDimensionRatio="w,1:1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+
+                />
+
+
+                <ImageView android:layout_width="120dp"
+                           android:layout_height="120dp"
+                           android:id="@+id/account"
+                           android:src="@drawable/people"
+                           android:layout_gravity="center_horizontal"
+                           tools:ignore="ContentDescription"
+                           app:layout_constraintTop_toTopOf="parent"
+                           android:layout_marginTop="40dp" android:layout_marginStart="32dp"
+                           app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="32dp"/>
+                <com.hfut.cqyzs.memorandum.utils.CircleImageView
+                        android:layout_width="78dp"
+                        android:src="@drawable/app_icon"
+                        android:layout_height="78dp"
+                        android:id="@+id/circleImageView"
+                        app:layout_constraintStart_toStartOf="@+id/account" android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp" android:layout_marginTop="20dp"
+                        app:layout_constraintTop_toTopOf="@+id/account">
+
+                </com.hfut.cqyzs.memorandum.utils.CircleImageView>
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_gravity="center_horizontal"
+                          android:textSize="25sp"
+                          android:text="@string/slide_name"
+                          android:layout_height="wrap_content" android:id="@+id/tv_user_name"
+                          app:layout_constraintTop_toBottomOf="@+id/account" android:layout_marginTop="8dp"
+                          app:layout_constraintEnd_toEndOf="@+id/account"
+                          app:layout_constraintStart_toStartOf="@+id/account"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/rv_item"
+                    android:layout_weight="1"
+                    android:layout_marginTop="30dp"
+                    android:divider="#ffffff"
+                    android:dividerHeight="3dp"
+                    android:layout_height="0dp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_marginBottom="0dp"
+                    android:layout_height="80dp">
+
+                <Button android:layout_width="30dp"
+                        android:layout_height="30dp" tools:ignore="ButtonStyle" android:id="@+id/btn_setting"
+                        android:background="@drawable/setting" android:layout_marginStart="32dp"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="32dp"
+                        android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"/>
+
+                <Button android:layout_width="30dp"
+                        android:layout_height="30dp" tools:ignore="ButtonStyle" android:id="@+id/btn_cloud"
+                        android:background="@drawable/upanddown"
+                        app:layout_constraintStart_toEndOf="@+id/btn_setting" android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="8dp"
+                        app:layout_constraintEnd_toStartOf="@+id/btn_add_item" android:layout_marginRight="8dp"/>
+
+                <Button android:layout_width="30dp"
+                        android:layout_height="30dp" tools:ignore="ButtonStyle" android:id="@+id/btn_add_item"
+                        android:background="@drawable/newitem"
+                        app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="32dp"
+                        android:layout_marginRight="32dp" android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toTopOf="parent"/>
+                <TextView
+                        android:text="系统设置"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_setting" android:textColor="#605B5B"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/btn_setting"
+                        app:layout_constraintEnd_toEndOf="@+id/btn_setting"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_setting" android:layout_marginTop="8dp"/>
+                <TextView
+                        android:text="云同步"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_upload" android:textSize="12sp"
+                        android:textColor="#FF605B5B"
+                        app:layout_constraintStart_toStartOf="@+id/btn_cloud"
+                        app:layout_constraintEnd_toEndOf="@+id/btn_cloud" android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_cloud"/>
+                <TextView
+                        android:text="新建清单"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_list"
+                        android:textColor="#FF605B5B" android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/btn_add_item"
+                        app:layout_constraintEnd_toEndOf="@+id/btn_add_item" android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_add_item"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</FrameLayout>
